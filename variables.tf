@@ -31,13 +31,13 @@ variable "domain" {
 variable "datacenter" {
   description = "Datacenter where instance will be deployed."
   type        = string
-  default     = ""
+  default     = "wdc07"
 }
 
 variable "ssh_key" {
   description = "Classic IaaS ssh key to add to compute instance."
   type        = string
-  default     = ""
+  default     = "ryan_hyperion_2020"
 }
 
 variable "instance_count" {
@@ -46,14 +46,14 @@ variable "instance_count" {
   default     = "3"
 }
 
-variable "public_vlan_name" {
-  description = "Name of the public VLAN where compute instances will be deployed."
+variable "private_vlan_number" {
+  description = "Private VLAN number associated with vSRX."
   type        = string
-  default     = ""
+  default     = "3036"
 }
 
-variable "private_vlan_name" {
-  description = "Name of the private VLAN where compute instances will be deployed."
+variable "public_vlan_number" {
+  description = "Public VLAN number associated with vSRX."
   type        = string
-  default     = ""
+  default     = "1971"
 }

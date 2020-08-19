@@ -1,0 +1,17 @@
+---
+  - hosts: ha1
+    connection: local
+    gather_facts: no
+    roles:
+      - Juniper.junos
+    tasks:
+      - name: load configure lines into device
+        juniper_junos_config:
+          config_mode: "private"
+          load: "set"
+          lines:
+            - set interfaces reth3 unit 1971 vlan-id 1971
+            - set interfaces reth3 unit 1971 family inet address 169.61.94.97/28
+            - set security zones security-zone CUSTOMER-PUBLIC interfaces reth3.1971 host-inbound-traffic system-services all
+            - set security address-book global address VSI_PUB_NET 169.61.94.96/28
+        register: response
