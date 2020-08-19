@@ -49,11 +49,11 @@ variable "instance_count" {
 variable "public_vlan_name" {
   description = "Name of the public VLAN where compute instances will be deployed."
   type        = string
-   default =   ""
+  default     = ""
 }
 
 variable "private_vlan_name" {
   description = "Name of the private VLAN where compute instances will be deployed."
   type        = string
-  default = ""
+  default     = ""
 }
