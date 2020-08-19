@@ -46,13 +46,13 @@ variable "instance_count" {
   default     = "3"
 }
 
-variable "private_vlan_number" {
+variable "private_vlan" {
   description = "Private VLAN number associated with vSRX."
   type        = string
   default     = "3036"
 }
 
-variable "public_vlan_number" {
+variable "public_vlan" {
   description = "Public VLAN number associated with vSRX."
   type        = string
   default     = "1971"
