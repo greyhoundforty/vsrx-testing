@@ -25,7 +25,7 @@ resource "ibm_compute_vm_instance" "web_node" {
   hourly_billing       = true
   private_network_only = true
   local_disk           = true
-  user_metadata        = file("${path.module}/install.yml")
+  user_metadata        = file("${path.module}/web-install.yml")
   flavor_key_name      = var.flavor
   tags                 = [var.datacenter, "ryantiffany"]
   ssh_key_ids          = [data.ibm_compute_ssh_key.deploymentKey.id]
